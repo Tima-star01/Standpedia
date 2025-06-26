@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>СТЭНДПЕДИЯ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+    }
+
+    .title {
+      font-size: 2rem;
+      color: #ff4d4d;
+      letter-spacing: 2px;
+    }
+
+    .menu-button {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #ff4d4d;
+      cursor: pointer;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #2a0000;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+      transition: right 0.3s ease;
+      padding-top: 60px;
+    }
+
+    .side-menu.open {
+      right: 0;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 15px 20px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #440000;
+    }
+
+    .side-menu a:hover {
+      background-color: #660000;
+    }
+
+    main {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title">СТЭНДПЕДИЯ</div>
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <div id="menu" class="side-menu">
+    <a href="Giorno.html">Giorno</a>
+    <a href="j8ske.html">J8SK</a>
+    <a href="jonathan.html">Jonathan</a>
+    <a href="JOSEPH.html">Joseph</a>
+    <a href="jotaro.html">Jotaro</a>
+    <a href="indec.html"> About Me</a>
+  </div>
+
+  <main>
+    <h1>Добро пожаловать в СТЭНДПЕДИЮ</h1>
+    <p>Здесь собраны все стенды и их владельцы, от Jonathan до Giorno. Исследуй их с помощью меню справа вверху.</p>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>
